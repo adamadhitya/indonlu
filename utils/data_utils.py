@@ -503,9 +503,9 @@ class EntailmentDataLoader(DataLoader):
 #####
 class DocumentSentimentDataset(Dataset):
     # Static constant variable
-    LABEL2INDEX = {'positive': 0, 'neutral': 1, 'negative': 2}
-    INDEX2LABEL = {0: 'positive', 1: 'neutral', 2: 'negative'}
-    NUM_LABELS = 3
+    LABEL2INDEX = {'Politik': 0, 'Sosial Budaya': 1, 'Pertahanan dan Keamanan': 2, 'Ideologi': 3, 'Ekonomi': 4, 'Sumber Daya Alam': 5, 'Demografi': 6, 'Geografi': 7}
+    INDEX2LABEL = {0: 'Politik', 1: 'Sosial Budaya', 2: 'Pertahanan dan Keamanan', 3: 'Ideologi', 4: 'Ekonomi', 5: 'Sumber Daya Alam', 6: 'Demografi', 7: 'Geografi'}
+    NUM_LABELS = 8
     
     def load_dataset(self, path): 
         df = pd.read_csv(path, sep='\t', header=None)
@@ -772,9 +772,9 @@ class AspectBasedSentimentAnalysisAiryDataset(Dataset):
 class AspectBasedSentimentAnalysisProsaDataset(Dataset):
     # Static constant variable
     ASPECT_DOMAIN = ['fuel', 'machine', 'others', 'part', 'price', 'service']
-    LABEL2INDEX = {'negative': 0, 'neutral': 1, 'positive': 2}
-    INDEX2LABEL = {0: 'negative', 1: 'neutral', 2: 'positive'}
-    NUM_LABELS = [3, 3, 3, 3, 3, 3]
+    LABEL2INDEX = {'Politik': 0, 'Sosial Budaya': 1, 'Pertahanan dan Keamanan': 2, 'Ideologi': 3, 'Ekonomi': 4, 'Sumber Daya Alam': 5, 'Demografi': 6, 'Geografi': 7}
+    INDEX2LABEL = {0: 'Politik', 1: 'Sosial Budaya', 2: 'Pertahanan dan Keamanan', 3: 'Ideologi', 4: 'Ekonomi', 5: 'Sumber Daya Alam', 6: 'Demografi', 7: 'Geografi'}
+    NUM_LABELS = [8, 8, 8, 8, 8, 8]
     NUM_ASPECTS = 6
     
     def load_dataset(self, path):
